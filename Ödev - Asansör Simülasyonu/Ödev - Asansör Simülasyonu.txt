@@ -1,0 +1,46 @@
+                         +------------------------+
+                         |        Building        |
+                         +------------------------+
+                         | - floors: int          |
+                         | - elevators: Elevator[]|
+                         +------------------------+
+                         | +callElevator(floor: int, direction: Direction): void |
+                         +------------------------+
+
+                                /          \
+                               /            \
+             +-------------------+       +------------------+
+             |     Elevator      |       |      Floor       |
+             +-------------------+       +------------------+
+             | - id: int         |       | - floorNumber: int|
+             | - capacity: int   |       | - doors: Door[]  |
+             | - currentFloor: int|       | - callButtons: CallButton[] |
+             | - direction: Direction |   +------------------+
+             | - passengers: Passenger[] |  | +pressCallButton(direction: Direction): void |
+             | - destinations: Set<int>  |  +------------------+
+             +-------------------+            ^
+             | +move(): void                  |
+             | +stop(): void                  |
+             | +addDestination(floor: int): void |
+             | +addPassenger(passenger: Passenger): void |
+             | +removePassenger(passenger: Passenger): void |
+             +-------------------+
+                   ^
+                   |
+          +--------+--------+
+          |                 |
+   +------v-----+    +------v-----+
+   |  Door      |    | CallButton  |
+   +------------+    +-------------+
+   |            |    | - direction: Direction |
+   | - isOpen: boolean | | +press(): void |
+   +------------+    +-------------+
+                   
+
+                        +------------------------+
+                        |      Passenger         |
+                        +------------------------+
+                        | - id: int              |
+                        | - sourceFloor: int     |
+                        | - destinationFloor: int|
+                        +------------------------+
