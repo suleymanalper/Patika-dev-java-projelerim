@@ -1,0 +1,28 @@
+               +----------------+
+               |     Animal     |
+               +----------------+
+               | - name: String |
+               | - weight: double |
+               | - age: int     |
+               +----------------+
+               | + getDosage(): Dosage |
+               | + getFeedSchedule(): FeedSchedule |
+               +----------------+
+                      ^
+                      |
+         +---------------------------+
+         |                           |
++------------------+       +------------------+
+|     Horse        |       |    Felidae      |
++------------------+       +------------------+
+| + getDosage()    |       | + getDosage()    |
+| + getFeedSchedule()     |       | + getFeedSchedule() |
++------------------+       +------------------+
+                      ^
+                      |
+               +---------------+
+               |   Rodent      |
+               +---------------+
+               | + getDosage() |
+               | + getFeedSchedule() |
+               +---------------+
