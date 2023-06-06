@@ -1,0 +1,34 @@
+            +----------------+              +-----------------+
+            |   Flight       |              |     Airport     |
+            +----------------+              +-----------------+
+            | - id: String   |              | - id: String    |
+            | - departureAirport: Airport    | - name: String  |
+            | - arrivalAirport: Airport      +-----------------+
+            | - departureTime: DateTime      | + getName(): String |
+            | - arrivalTime: DateTime        +-----------------+
+            | - pilot: Pilot[]               
+
+            +----------------+              +-----------------+
+            |   Airline      |              |     Aircraft    |
+            +----------------+              +-----------------+
+            | - id: String   |              | - id: String    |
+            | - name: String |              | - type: String  |
+            | - aircrafts: Aircraft[]         | - status: String|
+            | - pilots: Pilot[]               +-----------------+
+            | + addAircraft(): void          | + getType(): String|
+            | + removeAircraft(): void       | + getStatus(): String|
+            | + addPilot(): void             | + setStatus(): void |
+            | + removePilot(): void          +-----------------+
+            | + getAircrafts(): Aircraft[] 
+
+            +----------------+              +-----------------+
+            |    Pilot       |              |   DateTime      |
+            +----------------+              +-----------------+
+            | - id: String   |
+            | - name: String |
+            | - experience: int |
+            +-----------------+
+            | + getId(): String |
+            | + getName(): String |
+            | + getExperience(): int |
+            +-----------------+
