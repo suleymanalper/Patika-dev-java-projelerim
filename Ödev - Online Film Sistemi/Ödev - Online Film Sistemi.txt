@@ -1,0 +1,36 @@
+     +-------------------+
+     |   Film           |
+     +-------------------+
+     | - title: String   |
+     | - price: double   |
+     +-------------------+
+          ^
+          |
+          | 1           +-----------------------+
+          |            |  MovieRentalSystem     |
+          +------------+-----------------------+
+          |            | - movies: List<Film>  |
+          |            | - users: List<User>   |
+          +------------+-----------------------+
+                       | +listMovies(): List<Film> |
+                       | +sortMoviesByTitle(): List<Film> |
+                       | +sortMoviesByPrice(): List<Film> |
+                       | +requestMovie(title: String): void |
+                       +-----------------------+
+                                  ^
+                                  |
+                      +-----------+------------+
+                      |                       |
+             +--------v--+              +-------v------+
+             |   User   |              |   Subscriber  |
+             +--------^--+              +-------^------+
+                      |                       |
+   +------------------+-----------+   +-------+-------+
+   | - username: String          |   | - credits: int |
+   | - password: String          |   +---------------+
+   | - isSubscriber: boolean     |   | +buyCredits(creditAmount: int): void |
+   +------------------+-----------+   | +rentMovie(movie: Film): void |
+   | +login(): void               |   +---------------+
+   | +logout(): void              |
+   +------------------------------+
+
